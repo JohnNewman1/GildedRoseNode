@@ -1,5 +1,5 @@
 describe('IsellInQuality', function(){
-  var IsellInQuality = require('../../src/IsellInQuality')
+  var IsellInQuality = require('../src/IsellInQuality')
   beforeEach(function(){
     interface = new IsellInQuality();
     obj = {sellInUpdate: function(){}}
