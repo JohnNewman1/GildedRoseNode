@@ -24,7 +24,7 @@ describe('TicketItemStrategy', function(){
 
   it('Increases quality by 3 well sellIn below 5', function(){
     ticketStrategy.updateItem(ticketThree)
-    expect(ticketTwo.quality).toEqual(11)
+    expect(ticketThree.quality).toEqual(11)
   })
 
   it('Will set quality to 0 when sellIn goes below 0', function(){
