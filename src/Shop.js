@@ -1,3 +1,9 @@
+var AgedBrieStrategy = require('../src/AgedBrieItemStrategy');
+var ConjuredItemStrategy = require('../src/ConjuredItemStrategy');
+var NormalItemStrategy = require('../src/NormalItemStrategy');
+var SulfurasItemStrategy = require('../src/SulfurusItemStrategy');
+var TicketItemStrategy = require('../src/TicketItemStrategy');
+
 class Shop {
   constructor(items=[], obj){
     this.items = items;

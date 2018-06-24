@@ -1,8 +1,7 @@
-class SulfurasItemStrategy {
-  
+class SulfurusItemStrategy {
+
   updateItem(item){
-    return;
   }
 }
 
-module.exports = SulfurasItemStrategy;
+module.exports = SulfurusItemStrategy;
