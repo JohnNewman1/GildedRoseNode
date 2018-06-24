@@ -1,5 +1,5 @@
 describe('NormalItemStrategy', function(){
-  var NormalItemStrategy = require('../src/SulfurusItemStrategy');
+  var NormalItemStrategy = require('../src/NormalItemStrategy');
   beforeEach(function(){
     normalStrategy = new NormalItemStrategy();
     normalItem = { name: "normalItem", sellIn: 1, quality: 20 }
@@ -23,6 +23,6 @@ describe('NormalItemStrategy', function(){
 
   it('Will not let quality go beneath 0', function(){
     normalStrategy.updateItem(normalItemAtZero)
-    expect(normalItem.quality).toEqual(0)
+    expect(normalItemAtZero.quality).toEqual(0)
   })
 })
