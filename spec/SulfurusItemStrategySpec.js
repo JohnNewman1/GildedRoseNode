@@ -1,5 +1,5 @@
 describe('SulfurasItemStrategy', function(){
-  var SulfurasItemStrategy = require('../SulfurasItemStrategy');
+  var SulfurasItemStrategy = require('../src/SulfurusItemStrategy');
   beforeEach(function(){
     sulfurasStrategy = new SulfurasItemStrategy();
     sulfuras = { name: "Sulfuras, Hand of Ragnaros", sellIn: 0, quality: 80 }

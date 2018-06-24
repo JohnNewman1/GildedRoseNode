@@ -1,5 +1,5 @@
 describe('Item', function(){
-  var Item = require('../../src/item');
+  var Item = require('../src/Item');
   var item;
 
   beforeEach(function(){
