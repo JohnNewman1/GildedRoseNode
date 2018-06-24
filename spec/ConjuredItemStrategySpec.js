@@ -7,22 +7,22 @@ describe('ConjuredItemStrategy', function(){
   })
   it('Reduces sellIn by 1', function(){
     conjuredStrategy.updateItem(conjuredItem)
-    expect(normalItem.sellIn).toEqual(0)
+    expect(conjuredItem.sellIn).toEqual(0)
   })
 
-  it('Reduces quality by 1', function(){
+  it('Reduces quality by 2', function(){
     conjuredStrategy.updateItem(conjuredItem)
-    expect(normalItem.quality).toEqual(18)
+    expect(conjuredItem.quality).toEqual(18)
   })
 
-  it('Reduces quality by 2 well sellIn is zero or below', function(){
-    conjuredStrategy.updateItem(normalItem)
-    conjuredStrategy.updateItem(normalItem)
-    expect(normalItem.quality).toEqual(17)
+  it('Reduces quality by 4 well sellIn is zero or below', function(){
+    conjuredStrategy.updateItem(conjuredItem)
+    conjuredStrategy.updateItem(conjuredItem)
+    expect(conjuredItem.quality).toEqual(14)
   })
 
   it('Will not let quality go beneath 0', function(){
-    conjuredStrategy.updateItem(normalItemAtZero)
-    expect(normalItemAtZero.quality).toEqual(0)
+    conjuredStrategy.updateItem(conjuredItemAtZero)
+    expect(conjuredItemAtZero.quality).toEqual(0)
   })
 })
