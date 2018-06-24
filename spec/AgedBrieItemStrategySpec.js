@@ -1,7 +1,7 @@
-describe('AgedBrieStrategy', function(){
-  var AgedBrieStrategy = require('../src/AgedBrieStrategy');
+describe('AgedBrieItemStrategy', function(){
+  var AgedBrieItemStrategy = require('../src/AgedBrieItemStrategy');
   beforeEach(function(){
-    agedStrategy = new AgedBrieStrategy();
+    agedStrategy = new AgedBrieItemStrategy();
     agedBrie = { name: "Aged Brie", sellIn: 2, quality: 5 }
     agedBrieAboveFifty = { name: "Aged Brie", sellIn: 2, quality: 50 }
   })
@@ -23,7 +23,7 @@ describe('AgedBrieStrategy', function(){
   })
 
   it('Will not let quality go above 50', function(){
-    agedStrategy.updateItem(agedBrieAtZero)
+    agedStrategy.updateItem(agedBrieAboveFifty)
     expect(agedBrieAboveFifty.quality).toEqual(50)
   })
 })
