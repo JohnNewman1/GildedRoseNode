@@ -6,7 +6,7 @@
 
 This project was set by Makers Academy as a practise tech test.
 
-The goal of this tech test was to take the legacy code of GildedRose, add a new feature and refactor the code. The main challenge is that the Item class can not be changed.
+The goal of this tech test was to take the legacy code of GildedRose, add a new feature and refactor the code without changing the Item class.
 
 ### Specification
 
@@ -16,7 +16,7 @@ https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRose
 
 Before starting the project I noted out some brief plans to best tackle the problem.
 
-- A Full feature test for the legacy code provided by Gilded Rose covering all cases
+- A full feature test for the legacy code provided by Gilded Rose covering all cases
 - Add the new feature for conjuring items to the original code
 - Research different techniques to refactor the code
 - Implement the technique using TDD and make sure all feature tests still pass
