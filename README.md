@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/JohnNewman1/GildedRoseTake2.svg?branch=master)](https://travis-ci.org/JohnNewman1/GildedRoseTake2)
 
-This Project was set by Makers Academy as a practise tech test.
+This project was set by Makers Academy as a practise tech test.
 
 ### Specification
 
@@ -14,20 +14,18 @@ https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRose
 - Add the new feature
 - Refactor the legacy code to be easier to use and read
 
-### Installation
+### Installation and use
 
 1. Fork and clone the repository
 2. Open ``GildedRose.html`` in the browser, It will show calculations for ten days
 
 ### Approach
 
-I have taken a interest in design patterns and wanted to implement this kata using the strategy pattern. The strategy pattern is implemented by creating different methods depending on a case. This case is checked at run time and the correct method is run. This allows for easy adaption and much smaller methods.
+I have taken a interest in design patterns and wanted to implement this kata using the strategy pattern. The strategy pattern is implemented by creating different methods depending on a case. This case is checked at run time and the correct method is called. This allows for easy adaption and much smaller methods.
 
 I planned to create a different strategy depending on the item name and call this upon the updateItem method being run in the shop class (please see the UML diagram below for further details)
 
 ### UML Diagram
-
-This diagram shows how I implemented the strategy pattern
 
 ![UML](GildedRose.png)
 
@@ -58,13 +56,13 @@ class Shop {
 
 ### Technology
 
-- javascript
+- Javascript
 - Node.js
 - Jquery
 - HTML
 
 ### Testing
 
-The project was Test Driven using Jasmine
+The project was test driven using Jasmine
 
-To run the tests open ``npm run test`` in the command line.
+To run the tests enter ``npm run test`` in the command line.
