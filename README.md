@@ -1,5 +1,7 @@
 # Gilded Rose JS
 
+[![Build Status](https://travis-ci.org/JohnNewman1/GildedRoseTake2.svg?branch=master)](https://travis-ci.org/JohnNewman1/GildedRoseTake2)
+
 This Project was set by Makers Academy as a practise tech test.
 
 ### Specification

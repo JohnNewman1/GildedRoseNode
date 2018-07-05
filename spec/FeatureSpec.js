@@ -1,6 +1,6 @@
 describe("Gilded Rose", function() {
 
-  var Item = require('../src/Item');
+  var Item = require('../src/Items');
   var Shop = require('../src/Shop');
 
 
