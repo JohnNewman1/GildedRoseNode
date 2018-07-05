@@ -65,4 +65,8 @@ class Shop {
 
 The project was test driven using Jasmine
 
-To run the tests enter ``npm run test`` in the command line.
+To run the following in the command line
+ ```
+ npm install
+ npm run test
+ ```
