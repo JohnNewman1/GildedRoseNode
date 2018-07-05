@@ -17,20 +17,54 @@ https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRose
 ### Installation
 
 1. Fork and clone the repository
-2. Open ``GildedRose.html`` in the browser, It will show you calculations for ten days
+2. Open ``GildedRose.html`` in the browser, It will show calculations for ten days
 
-### Improvements
+### Approach
 
-This code base could be improved by making seperate classes for each item, Some items have specific behaviour where others follow a similar pattern. By adding delta(increment or decrement rate) to Item you could make the code a lot easier to read. The special casses are tickets and legendary items which would need their own update methods.
+I have taken a interest in design patterns and wanted to implement this kata using the strategy pattern. The strategy pattern is implemented by creating different methods depending on a case. This case is checked at run time and the correct method is run. This allows for easy adaption and much smaller methods.
 
-Item entry is also not checked. For example Legendary items can be entered with a quality of less than 80. The Items should be checked when added to the shop for any specification conflicts.
+I planned to create a different strategy depending on the item name and call this upon the updateItem method being run in the shop class (please see the UML diagram below for further details)
+
+### UML Diagram
+
+This diagram shows how I implemented the strategy pattern
+
+![UML](GildedRose.png)
+
+### Code Snippet
+
+Shop Class
+
+```
+class Shop {
+  constructor(items=[], obj){
+    this.items = items;
+    this.strategy = obj || {
+      "Sulfuras, Hand of Ragnaros": new SulfurasItemStrategy(),
+      "Conjured Mana Cake": new ConjuredItemStrategy(),
+      "Backstage passes to a TAFKAL80ETC concert": new TicketItemStrategy(),
+      "Aged Brie": new AgedBrieStrategy()
+    }
+  }
+
+    updateQuality(){
+      this.items.forEach(function(item){
+        var strategy = this.strategy[item.name] || new NormalItemStrategy();
+        strategy.updateItem(item);
+      }.bind(this))
+    }
+}
+```
+
+### Technology
+
+- javascript
+- Node.js
+- Jquery
+- HTML
 
 ### Testing
 
-The project was tested via Jasmine
+The project was Test Driven using Jasmine
 
 To run the tests open ``npm run test`` in the command line.
-
-Code Coverage
-
-![Code Coverage](CodeCoverage.png)
